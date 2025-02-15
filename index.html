@@ -9,27 +9,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Rakkas&display=swap');
        
 
-        .centered-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            position: relative; /* Ensure it's positioned relative to the viewport */
-            z-index: 10; /* Higher value to place it above other elements */
-        }
 
-        .centered-image img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            position: relative; /* Ensure the image inside the container is positioned correctly */
+        body {
+            background-image: url('background.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-
-        .other-elements {
-            position: absolute; /* Position other elements separately */
-            z-index: 1; /* Lower value to place them behind the image */
+    
         
 
 .coustard-regular {
