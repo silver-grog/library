@@ -8,17 +8,29 @@
    
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Rakkas&display=swap');
        
-      .fondo {
+
+        .centered-image {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('tu-imagen.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh; /* Ajusta la altura según tus necesidades */
+            height: 100vh;
+            margin: 0;
+            position: relative; /* Ensure it's positioned relative to the viewport */
+            z-index: 10; /* Higher value to place it above other elements */
         }
-      
+
+        .centered-image img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            position: relative; /* Ensure the image inside the container is positioned correctly */
+        }
+
+        .other-elements {
+            position: absolute; /* Position other elements separately */
+            z-index: 1; /* Lower value to place them behind the image */
+        
 
 .coustard-regular {
   font-family: "Coustard", serif;
@@ -47,15 +59,20 @@
   </head>
 <body>
 
+    <div class="centered-image">
+        <img src="background.png" alt="Centered Image">
+    </div>
+
+    <div class="other-elements">
 <h2 class="courier">Image Size</h2>
 
 <p class="coustard-regular">Here we use the style attribute to specify the width and height of an image:</p>
 
   
 <a href="form.html">link text</a>
+    </div>
 
-<img class="fondo" src="background.png" alt="background">
-
+  
 </body>
 </html>
 
