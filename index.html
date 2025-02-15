@@ -11,8 +11,9 @@
 
 
 
+
         body {
-            background-image: url('background.png');
+            background-image: url('your-image.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -20,6 +21,14 @@
             height: 100vh;
         }
 
+        /* Adjustments for mobile devices */
+        @media (max-width: 768px) {
+            body {
+                background-size: contain; /* Adjusts the size of the image to fit within the screen */
+                background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+            }
+        }
+    
         
 
 .coustard-regular {
